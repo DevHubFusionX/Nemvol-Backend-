@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc --noEmit",
-    "start": "tsx src/index.ts",
+    "dev": "node init && tsx watch src/index.ts",
+    "build": "node init && tsc --noEmit",
+    "start": "node init && tsx src/index.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio"
@@ -20,6 +20,7 @@
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.44.2",
     "hono": "^4.7.11",
+    "node-fetch": "^3.3.2",
     "zod": "^3.25.67"
   },
   "devDependencies": {
